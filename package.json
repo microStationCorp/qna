@@ -5,13 +5,17 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@material-ui/icons": "^4.11.2",
     "bcrypt": "^5.0.0",
+    "concurrently": "^5.3.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
@@ -24,5 +28,6 @@
     "@types/mongoose": "^5.10.2",
     "crypto": "^1.0.1",
     "nodemon": "^2.0.6"
-  }
+  },
+  "proxy": "http://localhost:5000"
 }
