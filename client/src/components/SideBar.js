@@ -4,7 +4,9 @@ import {
   ListItem,
   makeStyles,
   Typography,
+  IconButton,
 } from "@material-ui/core";
+import DashboardOutlinedIcon from "@material-ui/icons/DashboardOutlined";
 
 const useStyles = makeStyles({
   root: {
@@ -28,6 +30,14 @@ export default function SideBar() {
           Hi, Sujan Mondal
         </Typography>
         <Divider />
+        <List>
+          <ListItem>
+            <IconButton>
+              <DashboardOutlinedIcon />
+            </IconButton>
+            <Typography>dashboard</Typography>
+          </ListItem>
+        </List>
       </div>
     </>
   );
